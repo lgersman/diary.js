@@ -28,7 +28,7 @@ export class Diary {
    */
   static reporter(reporter, config = {}) {
     var defaults = { level: ['*'], group: ['*'] };
-    config = [defaults, config].reduce(Object.assign);
+    config = Object.assign( defaults, config);
     var newReporter = {
       reporter, config
     };
